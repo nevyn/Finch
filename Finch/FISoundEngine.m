@@ -7,7 +7,10 @@
 @end
 
 @implementation FISoundEngine
-@synthesize device, context, logger, isRunning, audioSession;
+@synthesize device, context, logger, isRunning;
+#if TARGET_OS_IPHONE
+@synthesize audioSession;
+#endif
 
 #pragma mark Initialization
 
@@ -15,7 +18,9 @@
 {
     self = [super init];
     [self setLogger:FILoggerNull];
+#if TARGET_OS_IPHONE
     [self setAudioSession:[AVAudioSession sharedInstance]];
+#endif
     return self;
 }
 
@@ -23,7 +28,9 @@
 {
     [self closeAudioDevice];
     [logger release];
+#if TARGET_OS_IPHONE
     [audioSession release];
+#endif
     [super dealloc];
 }
 
@@ -66,6 +73,7 @@
 
 #pragma mark Audio Session Convenience
 
+#if TARGET_OS_IPHONE
 - (BOOL) activateAudioSessionWithCategory: (NSString*) categoryName
 {
     NSError *error = nil; BOOL success = YES;
@@ -94,5 +102,6 @@
         logger(@"Failed to deactivate audio session: %@", error);
     }
 }
+#endif
 
 @end

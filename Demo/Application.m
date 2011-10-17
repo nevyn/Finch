@@ -20,7 +20,7 @@
     [soundEngine activateAudioSessionWithCategory:AVAudioSessionCategoryPlayback];
     [soundEngine openAudioDevice];
 
-    [controller setSitarSound:[soundFactory loadSoundNamed:@"sitar.wav"]];
+    [controller setSitarSound:[soundFactory loadSoundNamed:@"sitar.wav" maxPolyphony:10]];
     [controller setGunSound:[soundFactory loadSoundNamed:@"shot.wav" maxPolyphony:4]];
 
     [window setRootViewController:controller];

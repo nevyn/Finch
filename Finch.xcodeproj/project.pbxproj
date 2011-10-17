@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		052A5E6F144CBA0F005C12AC /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 052A5E6E144CBA0F005C12AC /* Cocoa.framework */; };
+		052A5E7E144CBA47005C12AC /* FILogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DF32B9E141A03AC0059033C /* FILogger.m */; };
+		052A5E7F144CBA47005C12AC /* FISoundEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D2AA94F1417501200F4071B /* FISoundEngine.m */; };
+		052A5E80144CBA47005C12AC /* FIErrorReporter.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D2AA9511417501200F4071B /* FIErrorReporter.m */; };
+		052A5E81144CBA47005C12AC /* FISound.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D2AA9551417501200F4071B /* FISound.m */; };
+		052A5E82144CBA47005C12AC /* FIRevolverSound.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D2AA9531417501200F4071B /* FIRevolverSound.m */; };
+		052A5E83144CBA47005C12AC /* FIFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DF32B9A141A03150059033C /* FIFactory.m */; };
+		052A5E84144CBA68005C12AC /* FIPCMDecoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D2AA964141750AE00F4071B /* FIPCMDecoder.m */; };
+		052A5E85144CBA70005C12AC /* FISoundSample.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D2AA966141750AE00F4071B /* FISoundSample.m */; };
+		052A5E87144CBAA1005C12AC /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 052A5E86144CBAA1005C12AC /* OpenAL.framework */; };
 		0D1BA64D141A41EB004A5A9F /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D2AA9AB141752D800F4071B /* OpenAL.framework */; };
 		0D1BA64E141A41EB004A5A9F /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D2AA9A9141752BE00F4071B /* AudioToolbox.framework */; };
 		0D1BA64F141A41EB004A5A9F /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D2AA9A7141752A200F4071B /* AVFoundation.framework */; };
@@ -81,6 +91,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		052A5E6D144CBA0F005C12AC /* libfinch.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libfinch.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		052A5E6E144CBA0F005C12AC /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
+		052A5E71144CBA0F005C12AC /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		052A5E72144CBA0F005C12AC /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		052A5E73144CBA0F005C12AC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		052A5E86144CBAA1005C12AC /* OpenAL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenAL.framework; path = SDKs/MacOSX10.7.sdk/System/Library/Frameworks/OpenAL.framework; sourceTree = DEVELOPER_DIR; };
 		0D1BA656141A45B6004A5A9F /* Tests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Tests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D1BA657141A45B6004A5A9F /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		0D1BA664141A45B6004A5A9F /* prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = prefix.pch; sourceTree = "<group>"; };
@@ -128,6 +144,15 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		052A5E6A144CBA0F005C12AC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				052A5E87144CBAA1005C12AC /* OpenAL.framework in Frameworks */,
+				052A5E6F144CBA0F005C12AC /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		0D1BA652141A45B6004A5A9F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -168,6 +193,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		052A5E70144CBA0F005C12AC /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				052A5E71144CBA0F005C12AC /* AppKit.framework */,
+				052A5E72144CBA0F005C12AC /* CoreData.framework */,
+				052A5E73144CBA0F005C12AC /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
 		0D1BA65B141A45B6004A5A9F /* Test Support */ = {
 			isa = PBXGroup;
 			children = (
@@ -196,6 +231,7 @@
 				0D2AA93E14174FA000F4071B /* libFinch.a */,
 				0D2AA971141750F700F4071B /* Finch Demo.app */,
 				0D1BA656141A45B6004A5A9F /* Tests.octest */,
+				052A5E6D144CBA0F005C12AC /* libfinch.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -203,12 +239,15 @@
 		0D2AA94014174FA000F4071B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				052A5E86144CBAA1005C12AC /* OpenAL.framework */,
 				0D2AA9AB141752D800F4071B /* OpenAL.framework */,
 				0D2AA9A9141752BE00F4071B /* AudioToolbox.framework */,
 				0D2AA9A7141752A200F4071B /* AVFoundation.framework */,
 				0D2AA94114174FA000F4071B /* Foundation.framework */,
 				0D2AA973141750F700F4071B /* UIKit.framework */,
 				0D1BA657141A45B6004A5A9F /* SenTestingKit.framework */,
+				052A5E6E144CBA0F005C12AC /* Cocoa.framework */,
+				052A5E70144CBA0F005C12AC /* Other Frameworks */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -226,8 +265,8 @@
 				0D2AA9541417501200F4071B /* FISound.h */,
 				0D2AA9551417501200F4071B /* FISound.m */,
 				0D2AA9521417501200F4071B /* FIRevolverSound.h */,
-				0D2AA9531417501200F4071B /* FIRevolverSound.m */,
 				0DF32B99141A03150059033C /* FIFactory.h */,
+				0D2AA9531417501200F4071B /* FIRevolverSound.m */,
 				0DF32B9A141A03150059033C /* FIFactory.m */,
 				0D1BA66B141A4695004A5A9F /* FIFactoryTests.m */,
 			);
@@ -280,6 +319,13 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		052A5E6B144CBA0F005C12AC /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		0D2AA93C14174FA000F4071B /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -301,6 +347,23 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		052A5E6C144CBA0F005C12AC /* finch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 052A5E7C144CBA0F005C12AC /* Build configuration list for PBXNativeTarget "finch" */;
+			buildPhases = (
+				052A5E69144CBA0F005C12AC /* Sources */,
+				052A5E6A144CBA0F005C12AC /* Frameworks */,
+				052A5E6B144CBA0F005C12AC /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = finch;
+			productName = finch;
+			productReference = 052A5E6D144CBA0F005C12AC /* libfinch.a */;
+			productType = "com.apple.product-type.library.static";
+		};
 		0D1BA655141A45B6004A5A9F /* Tests */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0D1BA665141A45B6004A5A9F /* Build configuration list for PBXNativeTarget "Tests" */;
@@ -376,6 +439,7 @@
 			projectRoot = "";
 			targets = (
 				0D2AA93D14174FA000F4071B /* Finch */,
+				052A5E6C144CBA0F005C12AC /* finch */,
 				0D1BA655141A45B6004A5A9F /* Tests */,
 				0D2AA970141750F700F4071B /* Finch Demo */,
 			);
@@ -423,6 +487,21 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		052A5E69144CBA0F005C12AC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				052A5E7F144CBA47005C12AC /* FISoundEngine.m in Sources */,
+				052A5E80144CBA47005C12AC /* FIErrorReporter.m in Sources */,
+				052A5E82144CBA47005C12AC /* FIRevolverSound.m in Sources */,
+				052A5E81144CBA47005C12AC /* FISound.m in Sources */,
+				052A5E84144CBA68005C12AC /* FIPCMDecoder.m in Sources */,
+				052A5E85144CBA70005C12AC /* FISoundSample.m in Sources */,
+				052A5E83144CBA47005C12AC /* FIFactory.m in Sources */,
+				052A5E7E144CBA47005C12AC /* FILogger.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		0D1BA651141A45B6004A5A9F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -480,6 +559,44 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		052A5E7A144CBA0F005C12AC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(DEVELOPER_FRAMEWORKS_DIR)\"",
+				);
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = prefix.pch;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		052A5E7B144CBA0F005C12AC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(DEVELOPER_FRAMEWORKS_DIR)\"",
+				);
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = prefix.pch;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
 		0D1BA666141A45B6004A5A9F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -612,6 +729,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		052A5E7C144CBA0F005C12AC /* Build configuration list for PBXNativeTarget "finch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				052A5E7A144CBA0F005C12AC /* Debug */,
+				052A5E7B144CBA0F005C12AC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		0D1BA665141A45B6004A5A9F /* Build configuration list for PBXNativeTarget "Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
