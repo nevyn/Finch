@@ -12,6 +12,7 @@
 - (id) initWithSample: (FISoundSample*) sample error: (NSError**) error;
 
 - (void) play;
+- (void) playUntilFinished;
 - (void) stop;
 
 @end

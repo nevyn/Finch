@@ -103,7 +103,7 @@
     const ALenum format = sample.channels == 1 ?
         (sample.bitsPerChannel == 16 ? AL_FORMAT_MONO16 : AL_FORMAT_MONO8) :
         (sample.bitsPerChannel == 16 ? AL_FORMAT_STEREO16 : AL_FORMAT_STEREO8);
-    return [self initWithData:sample.data.bytes size:sample.data.length
+    return [self initWithData:sample.data.bytes size:(ALsizei)sample.data.length
         format:format sampleRate:sample.sampleRate duration:sample.duration];
 }
 
@@ -143,6 +143,14 @@
     [self checkSuccessOrLog:@"Failed to start sound"];
 }
 
+- (void)dummy {}
+- (void) playUntilFinished
+{
+    [self play];
+    // ensures extended lifetime of this object
+    [self performSelector:@selector(dummy) withObject:nil afterDelay:self.duration];
+}
+
 - (void) stop
 {
     if (!self.playing)
@@ -150,6 +158,7 @@
     CLEAR_ERROR_FLAG;
     alSourceStop(source);
     [self checkSuccessOrLog:@"Failed to stop sound"];
+    [NSObject cancelPreviousPerformRequestsWithTarget:self selector:@selector(dummy) object:nil];
 }
 
 @end
