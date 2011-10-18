@@ -121,6 +121,17 @@
     alSourcef(source, AL_PITCH, pitch);
 }
 
+- (FIVector*)position;
+{
+    ALfloat x, y, z;
+    alGetSource3f(source, AL_POSITION, &x, &y, &z);
+    return [FIVector vectorWithX:x Y:y Z:z];
+}
+-(void)setPosition:(FIVector *)position;
+{
+    alSource3f(source, AL_POSITION, position.x, position.y, position.z);
+}
+
 - (BOOL) playing
 {
     ALint state;

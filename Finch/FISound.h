@@ -1,3 +1,5 @@
+#import "FIVector.h"
+
 @class FISoundSample;
 
 @interface FISound : NSObject
@@ -8,6 +10,7 @@
 @property(assign, nonatomic) BOOL loop;
 @property(assign, nonatomic) float gain;
 @property(assign, nonatomic) float pitch;
+@property(copy, nonatomic) FIVector *position;
 
 - (id) initWithSample: (FISoundSample*) sample error: (NSError**) error;
 

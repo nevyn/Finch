@@ -71,6 +71,17 @@
     [self setIsRunning:NO];
 }
 
+-(FIVector*)listenerPosition;
+{
+    ALfloat x, y, z;
+    alGetListener3f(AL_POSITION, &x, &y, &z);
+    return [FIVector vectorWithX:x Y:y Z:z];
+}
+-(void)setListenerPosition:(FIVector *)listenerPosition;
+{
+    alListener3f(AL_POSITION, listenerPosition.x, listenerPosition.y, listenerPosition.z);
+}
+
 #pragma mark Audio Session Convenience
 
 #if TARGET_OS_IPHONE

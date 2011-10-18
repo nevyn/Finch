@@ -1,4 +1,5 @@
 #import "FILogger.h"
+#import "FIVector.h"
 
 @interface FISoundEngine : NSObject
 
@@ -12,5 +13,7 @@
 
 - (BOOL) openAudioDevice;
 - (void) closeAudioDevice;
+
+@property(nonatomic,copy) FIVector *listenerPosition;
 
 @end
